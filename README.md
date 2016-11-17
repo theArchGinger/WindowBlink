@@ -1,5 +1,5 @@
 # WindowBlink
-This is a project of mine, the purpose of which is to blink some LEDs in my window, so it doesn't get lonely. Anyone that lives in a large apartment building and gets free elecricity has no excuse not to do something creative with their window.
+This is a project of mine, the purpose of which is to blink some LEDs in my window, so it doesn't look lame. Anyone that lives in a large apartment building and gets free elecricity has no excuse not to do something creative with their window.
 
 The code will be completely in python for the time being, as this is my only excuse to write python code. This code was developed and run on a RaspberryPi 2 B+.
 
