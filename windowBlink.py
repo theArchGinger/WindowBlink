@@ -9,13 +9,10 @@ GPIO.setmode(GPIO.BCM)	#could also be (GPIO.BOARD) for using pin numbers
 delay = 3600*input("Delay in hours: ")
 iterations = 3600*input("Running time in hours: ")
 redList  = [4, 16];	# list of all the pin numbers of the red LEDs
-grnList= [5, 6];	# list of all the pin numbers of the green LEDs
-allList  = redList + grnList # all LED pin numbers
-for element in allList:	#iterate through all LEDs
+for element in redList:	#iterate through all LEDs
 	GPIO.setup(element, GPIO.OUT) # set them to output
 
 for element in redList: GPIO.output(element, 0)
-for element in grnList: GPIO.output(element, 1)
 
 try:
 	for i in range(0,int(delay)+int(iterations)):
@@ -24,7 +21,7 @@ try:
 			print print_statement
 		if i >= delay:
 			if randint(0,1): # ~50% chance of execuiting
-				for element in allList:
+				for element in redList:
 					GPIO.output(element, not GPIO.input(element))
 		sleep(1.0014)
 	print "Done."
